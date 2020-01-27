@@ -1,17 +1,115 @@
-<head>Team Introduction</head>
+<head>
+    <style>
+        /*Three columns side by side*/
+        .column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 16px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+    </style>
+</head>
 
 <body>
-    <p>"Danisa Dolder  (the hard worker)"</p>
-    <img src="C:\Users\abhis\Desktop\CE EN 514\abu.jpg" width="300" height="350" > 
-    <p>"Hayden Andersen (The true American hero)"</p>
-    <img src="C:\Users\abhis\Desktop\CE EN 514\abu.jpg" width="300" height="350" > 
-    <p>"Giovanni Bustamante ( the evil mastermind)"</p>
-    <img src="C:\Users\abhis\Desktop\CE EN 514\abu.jpg" width="300" height="350" > 
-    <p>"Abhishek Amalaraj (???)"</p>
-    <img src="C:\Users\abhis\Desktop\CE EN 514\abu.jpg" width="300" height="350" > 
-
-    <p>"This project is a product of collective effort from members of our team called 'Sons and daughter of Anarchy' which includes Hayden Andersen, Danisa Dolder, Giovanni and Abhishek Amalaraj" </p>
-  
-    <p>"The webapp is called ViewBUILD which can help identify the locations of a city that can be viewed from a point located in a city. The app also has preproccesed information which shows us empty land areas which are vacant for the purpose of building skyscrapers"</p>
-
+  <h2>Team Introduction</h2>
+          <p class="title">"This project is a product of collective effort from members of our team called 'Sons and daughter of Anarchy' which includes Hayden Andersen, Danisa Dolder, Giovanni and Abhishek Amalaraj"</p>
+          <p>"The webapp is called ViewBUILD which can help identify the locations of a city that can be viewed from a point located in a city. The app also has preproccesed information which shows us empty land areas which are vacant for the purpose of building skyscrapers"</p>
 </body>
+<div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="C:\Users\abhis\Desktop\CE EN 514\danisa.jpg" alt="Jane" style="width:70%">
+        <div class="container">
+          <h2>Danisa</h2>
+          <p class="title">(the hard worker)</p>
+         
+          
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        <img src="C:\Users\abhis\Desktop\CE EN 514\hayden.jpg" alt="Mike" style="width:70%">
+        <div class="container">
+          <h2>Hayden Andersen</h2>
+          <p class="title">(The true American hero)</p>
+
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+<div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="C:\Users\abhis\Desktop\CE EN 514\gio.jpg" alt="Jane" style="width:70%">
+        <div class="container">
+          <h2>Giovanni Bustamante</h2>
+          <p class="title">( the evil mastermind)</p>
+         
+          
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div> 
+
+    <div class="column">
+      <div class="card">
+        <img src="C:\Users\abhis\Desktop\CE EN 514\abu.jpg" alt="Mike" style="width:70%">
+        <div class="container">
+          <h2>Abhishek Amalaraj</h2>
+          <p class="title">(???)</p>
+
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+
