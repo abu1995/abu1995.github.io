@@ -1,0 +1,33 @@
+.feettitle{
+    font-weight: bold;
+    font-style: italic;
+    color: maroon;
+}
+
+h1{
+    color: oldlace;
+}
+
+h2{
+    color: oldlace;
+}
+
+body{
+    background-color: blue;
+}
+
+.feet{
+    background-color: orange;
+}
+
+.temp{
+    background-color:white;
+}
+
+.weight{
+    background-color: greenyellow;
+}
+
+.outputMeters{
+    background-color: oldlace;
+}

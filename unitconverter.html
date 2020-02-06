@@ -1,0 +1,37 @@
+<head>
+
+    <script src="unitconverter.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<h1>Abhishek Amalaraj</h1>
+<h2>Unit Converter</h2>
+<p>
+<div class="feet">
+  <label id="feet" >Feet</label>
+  <input class ="feettitle" type="number" placeholder="Feet"
+  oninput="lengthConverter(this.value)"
+  >
+</p>
+<p>cm: <span id="outputMeters"></span>centimeters</p>
+</div>
+</p>
+<div class="temp">
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
+  oninput="temperatureConverter(this.value)">
+</p>
+<p>Celsius: <span id="outputCelsius"></span> celsius</p>
+</div>
+
+<p>
+<div class="weight">
+  <label> Pound </label>
+  <input id="inputPounds" type="number" placeholder="Pounds"
+         oninput="poundConverter(this.value)">
+         </p>
+<p>Kilograms: <span id="outputKg"></span> kg</p>
+</div>
+<body>
+
+</body>
