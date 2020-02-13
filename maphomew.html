@@ -45,6 +45,14 @@ marker.bindPopup("<b>High school crush !</b><br>She was out of my league haha").
 var marker = L.marker([11.003954, 77.012356]).addTo(mymap);
 marker.bindPopup("<b>My home !</b><br>I ate a lot here and watched TV !").openPopup();
 
+var circle = L.circle([11.003954, 77.012356], {
+    color: 'green',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 800
+}).addTo(mymap);
+circle.bindPopup("<b>My home and neighborhood</b><br>Lots of love and memories");
+
 // var popup = L.popup()
 //     .setLatLng([11.001484, 77.017835])
 //     .setContent("My school - only the legends go there !")
