@@ -3,62 +3,148 @@
     <script src="mannings.js" type="text/javascript"></script>
     <style>
         /*Three columns side by side*/
-body {
+        body {
 
-background-image: url(img/office.jpg);
+            background-image: url(img/office.jpg);
 
-}
-.box {
-  font-size: x-large;
-  font-family: cursive;
-  color: white;
-}
-mark {
-  background-color:darkgreen;
-  color:white;
-}
-</style>
+        }
+
+        .box {
+            font-size: x-large;
+            font-family: cursive;
+            color: blue;
+            backface-visibility: initial;
+        }
+
+        mark {
+            background-color: darkgreen;
+            color: white;
+        }
+
+        mark2 {
+
+            background-color: red;
+            color: white;
+
+        }
+    </style>
 </head>
 
-<div class ="box">
-<h1><mark>Abhishek Amalaraj</mark> </h1>
-<h2><mark>Mannings Calculator</mark></h2>
-<p>
-    <div class="feet">
-        <label id="feet"><mark>Cross-sectional mean velocity (m/s)</mark></label>
-        <input class="feettitle" type="number" placeholder="(m/s) or (f/s)" oninput="crossSecvelo(this.value)">
+<div class="box">
+    <h1><mark>Abhishek Amalaraj</mark> </h1>
+    <h2><mark>Mannings Calculator</mark></h2>
+    <img src="img/rect.gif" height=200>
+    <p>
+        <mark2>The Manning formula is also known as the Gauckler–Manning formula, or Gauckler–Manning–Strickler formula
+            in Europe. In the United States, in practice, it is very frequently called simply Manning's equation.
+        </mark2>
+    </p>
+            <p>
+                <mark2> The Gauckler–Manning formula states:</mark2>
+            </p>
 
-</p>
-<!-- <p>
+            <p>
+                <mark2>V = k/n *(R^(2/3))*(S^(1/2))</mark2>
+            </p>
+            <p>
+                <mark2>where:</mark2>
+            </p>
+            <p>
+                <mark2>
+                    V is the cross-sectional average velocity (L/T; ft/s, m/s);
+                    n is the Gauckler–Manning coefficient. Units of n are often omitted, however n is not dimensionless,
+                    having
+                    units of: (T/[L1/3]; s/[ft1/3]; s/[m1/3]).
+                    Rh is the hydraulic radius (L; ft, m);
+                    S is the slope of the hydraulic grade line or the linear hydraulic head loss (L/L), which is the
+                    same as the
+                    channel bed slope when the water depth is constant. (S = hf/L).
+                    k is a conversion factor between SI and English units. It can be left off, as long as you make sure
+                    to note
+                    and correct the units in your "n" term. If you leave "n" in the traditional SI units, k is just the
+                    dimensional analysis to convert to English. k=1 for SI units, and k=1.49 for English units. (Note:
+                    (1
+                    m)1/3/s = (3.2808399 ft) 1/3/s = 1.4859 ft1/3/s)
+                </mark2>
+            </p>
+
+
+        </mark2>
+        <p>
+            <div class="feet">
+                <label id="feet"><mark>Cross-sectional mean velocity (m/s)</mark></label>
+                <input class="feettitle" type="number" placeholder="(m/s) or (f/s)" oninput="crossSecvelo(this.value)">
+
+        </p>
+        <!-- <p>
     <div class="feet">
         <label id="feet">1.486 for English units or 1.0 for SI units</label>
         <input class="feettitle" type="number" placeholder="1.486 or 1.0" oninput="k(this.value)">
 
 </p> -->
-<p>
-    <div class="feet">
-        <label id="feet"><mark>Mannings co-efficient for roughness</mark></label>
-        <input class="feettitle" type="number" placeholder="from 0.01 to 0.06" oninput="roughnessCoeff(this.value)">
+        <p>
+            <div class="feet">
+                <label id="feet"><mark>Mannings co-efficient for roughness</mark></label>
+                <input class="feettitle" type="number" placeholder="from 0.01 to 0.06"
+                    oninput="roughnessCoeff(this.value)">
 
-</p>
-<p>
+        </p>
+        <!-- <p>
     <div class="feet">
         <label id="feet"><mark>Hydraulic radius</mark></label>
         <input class="feettitle" type="number" placeholder="meter or feet" oninput="hydraulicRad(this.value)">
 
-</p>
-<p>
-    <div class="feet">
-        <label id="feet"><mark>Slope or gradient</mark></label>
-        <input class="feettitle" type="number" placeholder="meter or feet" oninput="slopeOrgrad(this.value)">
+</p> -->
+        <p>
+            <div class="feet">
+                <label id="feet"><mark>Slope or gradient</mark></label>
+                <input class="feettitle" type="number" placeholder="meter or feet" oninput="slopeOrgrad(this.value)">
 
-</p>
-<!-- <p>
+        </p>
+        <p>
+            <div class="feet">
+                <label id="feet"><mark>Width</mark></label>
+                <input class="feettitle" type="number" placeholder="meter or feet" oninput="takewidth(this.value)">
+
+        </p>
+        <p>
+            <div class="feet">
+                <label id="feet"><mark>Height</mark></label>
+                <input class="feettitle" type="number" placeholder="meter or feet" oninput="takeheight(this.value)">
+
+        </p>
+        <!-- <p>
     <button type="button" onclick="document.write(finalCalc())">Click it</button>
 
 </p> -->
 
 </div>
+
+<p><mark>The shape of the channel is Recatngular</mark></p>
+<div>
+    <!-- <input type="radio" id="english" name="Units" value="f/s" onclick="document.write(finalCalcEng())">
+    <label for="male"><mark>Rectangle</mark></label><br> -->
+    <p><mark>Please select your Option:</mark></p>
+    <input type="radio" id="english" name="Units" value="f/s" onclick="document.write(finalCalcEng())">
+    <label for="male"><mark>English</mark></label><br>
+    <input type="radio" id="si" name="units" value="m/s" onclick="document.write(finalCalcSi())">
+    <label for="female"><mark>SI units</mark></label><br>
+</div>
+</div>
+<!-- <div>
+<div>
+    <input type="radio" id="si" name="units" value="m/s" onclick="document.write(finalCalcSi())">
+    <label for="female"><mark>Trapezoid</mark></label><br>
+    <p><mark>Please select your Option:</mark></p>
+    <input type="radio" id="english" name="Units" value="f/s" onclick="document.write(finalCalcEng())">
+    <label for="male"><mark>English</mark></label><br>
+    <input type="radio" id="si" name="units" value="m/s" onclick="document.write(finalCalcSi())">
+    <label for="female"><mark>SI units</mark></label><br>
+
+</div>
+</div> -->
+
+<!-- </div>
 </p>
 <p><mark>Please select your Option:</mark></p>
     <input type="radio" id="english" name="Units" value="f/s" onclick="document.write(finalCalcEng())">
@@ -66,7 +152,7 @@ mark {
     <input type="radio" id="si" name="units" value="m/s" onclick="document.write(finalCalcSi())">
     <label for="female"><mark>SI units</mark></label><br>
 
-</div>
+</div> -->
 <!-- <form action="/action_page.php">
     <p>Please select your gender:</p>
     <input type="radio" id="english" name="Units" value="f/s" onclick="document.write(finalCalc())">
