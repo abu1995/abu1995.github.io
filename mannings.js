@@ -28,9 +28,16 @@ function slopeOrgrad(value) {
     slp = value;
 }
 
-function finalCalc(){
+function finalCalcEng(){
     console.log("hi");
-    output=(crsec/kn)*((hydrad)**(2/3))*((slp)**(1/2)); 
+    output=(crsec/1.486)*((hydrad)**(2/3))*((slp)**(1/2)); 
+    return output+" f/s";
+    //parseFloat = document.getElementById("outputtoshow").innerHTML;
+}
+
+function finalCalcSi(){
+    console.log("hi");
+    output=(crsec/1.0)*((hydrad)**(2/3))*((slp)**(1/2)); 
     return output+" m/s";
     //parseFloat = document.getElementById("outputtoshow").innerHTML;
 }

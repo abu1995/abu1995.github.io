@@ -1,44 +1,87 @@
 <head>
 
     <script src="mannings.js" type="text/javascript"></script>
+    <style>
+        /*Three columns side by side*/
+body {
+
+background-image: url(img/office.jpg);
+
+}
+.box {
+  font-size: x-large;
+  font-family: cursive;
+  color: white;
+}
+mark {
+  background-color:darkgreen;
+  color:white;
+}
+</style>
 </head>
 
-<h1>Abhishek Amalaraj</h1>
-<h2>Mannings Converter</h2>
+<div class ="box">
+<h1><mark>Abhishek Amalaraj</mark> </h1>
+<h2><mark>Mannings Calculator</mark></h2>
 <p>
     <div class="feet">
-        <label id="feet">cross-sectional mean velocity (m/s)</label>
-        <input class="feettitle" type="number" placeholder="(m/s)" oninput="crossSecvelo(this.value)">
+        <label id="feet"><mark>Cross-sectional mean velocity (m/s)</mark></label>
+        <input class="feettitle" type="number" placeholder="(m/s) or (f/s)" oninput="crossSecvelo(this.value)">
 
 </p>
-<p>
+<!-- <p>
     <div class="feet">
         <label id="feet">1.486 for English units or 1.0 for SI units</label>
         <input class="feettitle" type="number" placeholder="1.486 or 1.0" oninput="k(this.value)">
 
-</p>
+</p> -->
 <p>
     <div class="feet">
-        <label id="feet">Mannings co-efficient for roughness</label>
+        <label id="feet"><mark>Mannings co-efficient for roughness</mark></label>
         <input class="feettitle" type="number" placeholder="from 0.01 to 0.06" oninput="roughnessCoeff(this.value)">
 
 </p>
 <p>
     <div class="feet">
-        <label id="feet">Hydraulic radius</label>
-        <input class="feettitle" type="number" placeholder="m" oninput="hydraulicRad(this.value)">
+        <label id="feet"><mark>Hydraulic radius</mark></label>
+        <input class="feettitle" type="number" placeholder="meter or feet" oninput="hydraulicRad(this.value)">
 
 </p>
 <p>
     <div class="feet">
-        <label id="feet">Slope or gradient</label>
-        <input class="feettitle" type="number" placeholder="m" oninput="slopeOrgrad(this.value)">
+        <label id="feet"><mark>Slope or gradient</mark></label>
+        <input class="feettitle" type="number" placeholder="meter or feet" oninput="slopeOrgrad(this.value)">
 
 </p>
-<p>
+<!-- <p>
     <button type="button" onclick="document.write(finalCalc())">Click it</button>
 
-</p>
+</p> -->
 
 </div>
 </p>
+<p><mark>Please select your Option:</mark></p>
+    <input type="radio" id="english" name="Units" value="f/s" onclick="document.write(finalCalcEng())">
+    <label for="male"><mark>English</mark></label><br>
+    <input type="radio" id="si" name="units" value="m/s" onclick="document.write(finalCalcSi())">
+    <label for="female"><mark>SI units</mark></label><br>
+
+</div>
+<!-- <form action="/action_page.php">
+    <p>Please select your gender:</p>
+    <input type="radio" id="english" name="Units" value="f/s" onclick="document.write(finalCalc())">
+    <label for="male">English</label><br>
+    <input type="radio" id="si" name="units" value="m/s">
+    <label for="female">SI units</label><br>
+  
+    <br>  
+  
+    <p>Please select your age:</p>
+    <input type="radio" id="age1" name="age" value="30">
+    <label for="age1">0 - 30</label><br>
+    <input type="radio" id="age2" name="age" value="60">
+    <label for="age2">31 - 60</label><br>  
+    <input type="radio" id="age3" name="age" value="100">
+    <label for="age3">61 - 100</label><br><br>
+    <input type="submit" value="Submit">
+    </form> -->
