@@ -31,13 +31,13 @@ function slopeOrgrad(value) {
 function finalCalcEng(){
     console.log("hi");
     output=(crsec/1.486)*((hydrad)**(2/3))*((slp)**(1/2)); 
-    return output+" f/s";
+    return output+" f/s" +"The feeling you get when you succesfully calculate Mannings flow velocity especially in ENGLISH units :P";
     //parseFloat = document.getElementById("outputtoshow").innerHTML;
 }
 
 function finalCalcSi(){
     console.log("hi");
     output=(crsec/1.0)*((hydrad)**(2/3))*((slp)**(1/2)); 
-    return output+" m/s";
+    return output+" m/s" + "Congrats, you are killing it !!";
     //parseFloat = document.getElementById("outputtoshow").innerHTML;
 }
